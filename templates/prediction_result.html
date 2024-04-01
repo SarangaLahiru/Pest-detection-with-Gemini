@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <p>Predicted Pest: {{ prediction }}</p>
+
+    <p>{{details}}</p>
+
+    <form method="post" action="/solution">
+        <label for="pest">Enter the pest:</label><br>
+        <!-- Use value="{{ prediction }}" to pre-fill the input field -->
+        <input type="text" id="pest" value="{{ prediction }}" name="pest"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
